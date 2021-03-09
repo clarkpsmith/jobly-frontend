@@ -11,12 +11,15 @@ const Job = ({ job }) => {
   const { apply, currentUser } = useContext(UserContext);
 
   useEffect(() => {
-    if (currentUser) {
-      const applied = currentUser.applications.find(
-        (applicationId) => applicationId === job.id
-      );
-      setApplied(applied);
+    async function jobEffect() {
+      if (currentUser) {
+        const applied = currentUser.applications.find(
+          (applicationId) => applicationId === job.id
+        );
+        setApplied(applied);
+      }
     }
+    jobEffect();
   }, []);
 
   function handleClick() {
@@ -34,7 +37,7 @@ const Job = ({ job }) => {
       <br />
       <p>Salary: {salaryWithCommas ? `$${salaryWithCommas}` : "None"}</p>
       <p>
-        Equity: {job.equity == 0 || !job.equity ? "None" : `${job.equity} %`}
+        Equity: {job.equity === 0 || !job.equity ? "None" : `${job.equity} %`}
         <span>
           {applied ? (
             <Button

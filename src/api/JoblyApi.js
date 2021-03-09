@@ -97,12 +97,7 @@ class JoblyApi {
 
   static async updateProfile(formData) {
     // check if pasword matches, if not throws error
-    const authenticate = await this.getToken(
-      formData.username,
-      formData.password
-    );
-
-    const userData = await this.getCurrentUserData(formData.username);
+    await this.getToken(formData.username, formData.password);
 
     const res = await this.request(
       `users/${formData.username}`,

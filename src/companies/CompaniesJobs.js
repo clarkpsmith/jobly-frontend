@@ -15,14 +15,17 @@ const CompaniesJobs = () => {
 
   const { currentUser, updateCurrentUser } = useContext(UserContext);
 
-  useEffect(async () => {
-    const res = await JoblyApi.getCompaniesJobs(companyHandle);
+  useEffect(() => {
+    async function getCompaniesJobs() {
+      const res = await JoblyApi.getCompaniesJobs(companyHandle);
 
-    setJobs(res.company.jobs);
-    setCompanyData(res.company);
-    updateCurrentUser();
+      setJobs(res.company.jobs);
+      setCompanyData(res.company);
+      updateCurrentUser();
 
-    setIsLoading(false);
+      setIsLoading(false);
+    }
+    getCompaniesJobs();
   }, []);
 
   const jobsArray = jobs.map((job) => (

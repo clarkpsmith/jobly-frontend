@@ -12,11 +12,14 @@ const Jobs = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { currentUser, updateCurrentUser } = useContext(UserContext);
 
-  useEffect(async () => {
-    const res = await JoblyApi.getAllJobs();
-    setJobs(res);
-    updateCurrentUser();
-    setIsLoading(false);
+  useEffect(() => {
+    async function effectJobs() {
+      const res = await JoblyApi.getAllJobs();
+      setJobs(res);
+      updateCurrentUser();
+      setIsLoading(false);
+    }
+    effectJobs();
   }, []);
 
   async function searchJob(value) {

@@ -1,17 +1,8 @@
-import React, { useState, useParams } from "react";
+import React, { useState } from "react";
 import "../common/SearchForm.css";
 import Alert from "../helpers/Alert";
-import { useHistory } from "react-router-dom";
 
-import {
-  Button,
-  Card,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
+import { Button, Form, FormGroup } from "reactstrap";
 import "./Login.css";
 
 const Login = ({ login }) => {
@@ -21,7 +12,6 @@ const Login = ({ login }) => {
   };
   const [formData, setFormData] = useState(initialData);
   const [formErrors, setFormErrors] = useState(null);
-  const history = useHistory();
 
   function handleChange(evt) {
     const { name, value } = evt.target;

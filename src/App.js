@@ -23,11 +23,15 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
 
-  useEffect(async () => {
-    JoblyApi.token = currentToken;
-    await updateCurrentUser();
-    console.log(currentUser);
-    setIsLoading(false);
+  useEffect(() => {
+    async function loadUser() {
+      JoblyApi.token = currentToken;
+      await updateCurrentUser();
+      console.log(currentUser);
+      setIsLoading(false);
+    }
+
+    loadUser();
   }, [currentToken]);
 
   async function updateCurrentUser() {

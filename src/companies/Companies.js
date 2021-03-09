@@ -9,10 +9,13 @@ const Companies = () => {
   const [companies, setCompanies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(async () => {
-    const res = await JoblyApi.getAllCompanies();
-    setCompanies(res);
-    setIsLoading(false);
+  useEffect(() => {
+    async function getCompanies() {
+      const res = await JoblyApi.getAllCompanies();
+      setCompanies(res);
+      setIsLoading(false);
+    }
+    getCompanies();
   }, []);
 
   async function searchCompany(value) {

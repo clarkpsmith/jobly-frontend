@@ -11,7 +11,7 @@ function addCommas(numbers) {
   const addedCommas = [];
 
   for (let i = 0; i < reversedArray.length; i++) {
-    if (i % 3 == 0 && i !== 0) {
+    if (i % 3 === 0 && i !== 0) {
       addedCommas.push(",");
     }
     addedCommas.push(reversedArray[i]);
