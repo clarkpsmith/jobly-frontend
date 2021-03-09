@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="alert alert-danger Login-error"
+    role="alert"
+  >
+    <p
+      class="m-0 small"
+    >
+      Invalid Username/Password
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot when logged out  1`] = `
+<DocumentFragment>
+  <div
+    class="alert alert-danger Login-error"
+    role="alert"
+  >
+    <p
+      class="m-0 small"
+    >
+      Invalid Username/Password
+    </p>
+  </div>
+</DocumentFragment>
+`;

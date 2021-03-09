@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <a
+    href="/companies/anderson-arias-morrow"
+  >
+    <section
+      class="Company"
+    >
+      <h4
+        class="font-weight-bold"
+      >
+        Anderson, Arias and Morrow
+        <span>
+          <img
+            alt="Anderson, Arias and Morrow"
+            class="Company-logo"
+            src="/logos/logo3.png"
+            width="50px"
+          />
+        </span>
+      </h4>
+      <p>
+        Somebody program how I. Face give away discussion view act inside. Your official relationship administration here.
+      </p>
+    </section>
+  </a>
+</DocumentFragment>
+`;

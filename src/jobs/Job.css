@@ -1,0 +1,16 @@
+.Job {
+  font-size: x-small;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  text-align: left;
+  box-shadow: 0 0 2px grey;
+}
+
+.Job:hover {
+  box-shadow: 0 0 6px grey;
+}
+
+.Job-btn {
+  float: right;
+}

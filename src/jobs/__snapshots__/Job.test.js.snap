@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Job"
+  >
+    <h6
+      class="font-weight-bold"
+    >
+       Accommodation manager
+    </h6>
+    <h6>
+      Mejia, Scott and Ryan
+    </h6>
+    <br />
+    <p>
+      Salary: $126,000
+    </p>
+    <p>
+      Equity: None
+      <span>
+        <button
+          class="Job-btn btn btn-danger btn-sm disabled"
+          disabled=""
+          type="button"
+        >
+          Applied
+        </button>
+      </span>
+    </p>
+  </div>
+</DocumentFragment>
+`;

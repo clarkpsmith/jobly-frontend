@@ -1,0 +1,41 @@
+.Login {
+  text-align: left;
+  background-color: rgb(250, 250, 250);
+  height: 100%;
+  border: 1px solid rgb(216, 213, 213);
+  display: flex;
+  justify-content: center;
+}
+
+.Login-form {
+  /* margin: auto; */
+  text-align: left;
+  padding: 25px;
+  padding-left: 40px;
+  background-color: white;
+  width: 275px;
+  border: 1px solid rgb(216, 213, 213);
+  border-radius: 3px;
+}
+
+.Login-input {
+  border-radius: 3px;
+
+  width: 90%;
+  border: 1px solid rgb(216, 213, 213);
+}
+
+.Login-error {
+  width: 90%;
+  font-size: x-small;
+  padding: 0px;
+}
+
+.Login-btn {
+  margin: 25px;
+  float: right;
+}
+
+.Login-block {
+  margin: 50px;
+}
